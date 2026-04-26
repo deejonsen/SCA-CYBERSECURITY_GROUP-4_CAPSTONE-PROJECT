@@ -1,0 +1,39 @@
+# FreeIPA Audit Commands Checklist (Fedora VM)
+
+# --- System Setup ---
+sudo dnf update -y
+sudo dnf install freeipa-server freeipa-server-dns -y
+
+# --- FreeIPA Installation ---
+sudo ipa-server-install --setup-dns --allow-zone-overlap
+
+# --- Verify Services ---
+sudo systemctl status ipa
+sudo systemctl status dirsrv@$(hostname -s)
+sudo systemctl status pki-tomcatd@pki-tomcat
+
+# --- Admin Login ---
+kinit admin
+
+# --- User Management ---
+ipa user-add <username> --first=<name> --last=<name> --password
+ipa user-find
+
+# --- Password Policy ---
+ipa pwpolicy-show
+ipa pwpolicy-add --minlength=12 --minclasses=3 --maxfail=5 --lockouttime=600
+
+# --- MFA / OTP ---
+ipa otptoken-add admin
+kinit admin
+
+# --- Role Management ---
+ipa role-show Developer
+ipa role-show Admin
+ipa role-add-privilege Developer --privilege="User Administrators"
+
+# --- Account Audit ---
+ipa user-find --inactive
+
+# --- Privilege Escalation Test ---
+ipa role-add-privilege Developer --privilege="User Administrators"
