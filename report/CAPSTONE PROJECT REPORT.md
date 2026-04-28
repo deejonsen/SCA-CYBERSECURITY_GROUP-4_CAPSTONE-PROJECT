@@ -1,20 +1,31 @@
-**SHE CODE AFRICA ACADEMY COHORT 3.0**
+<div align="center">
+<img
+<img width="225" height="225" alt="SHE CODE" src="https://github.com/user-attachments/assets/79879295-eff3-4418-9605-2024becc91e2" />
+    
+---
 
-**CYBERSECURITY GROUP 4.**
+# **SHE CODE AFRICA ACADEMY COHORT 3.0**
 
-**A CAPSTONE PROJECT REPORT**
+# **CYBERSECURITY GROUP 4.**
 
-**ON**
+# **A CAPSTONE PROJECT REPORT**
 
-**PASSWORD SECURITY & IAM MISCONFIGURATION AUDIT.**
+# **ON**
 
-**GROUP LA: DEBORAH JAMES 3<sup>RD</sup> MAY, 2026.**
+# **PASSWORD SECURITY & IAM MISCONFIGURATION AUDIT.**
 
-**EXECUTIVE SUMMARY**
+# GROUP LA: DEBORAH JAMES
+**SUBMITTED: 3RD MAY, 2026.**
+
+---
+
+# **EXECUTIVE SUMMARY**
 
 This capstone project reviewed password policies and identity/access settings in the FreeIPA environment to identify weak authentication controls and misconfigured privileges. The objective of this project was to perform an audit of password and identity access management (IAM) controls implemented in FreeIPA on a Fedora virtual machine. Password policies, multi-factor authentication, and role assignment testing were performed to ensure proper configuration and uncover potential vulnerabilities. The audit of password security, revealed weak default passwords policies allowed on the server, login failure when first creating OTP tokens due to secret values not being defined, and a hypothetical risk of role misassignment. Recommendations were provided to improve security measures and implement least privilege.
 
-**INTRODUCTION**
+---
+
+# **INTRODUCTION**
 
 **Password security** refers to the set of policies, practices, and technologies designed to protect user credentials from unauthorized access, theft, or cracking. It is a subset of identity management that enforces requirements like complexity, length, and multi-factor authentication (MFA) to ensure that only legitimate users can access systems.
 
@@ -26,7 +37,9 @@ IAM operates on three core pillars: Authentication (verifying identity), Authori
 
 A security misconfiguration occurs when security settings are improperly set up or left at their insecure default settings. This can lead to vulnerabilities that attackers can exploit to gain unauthorized access, leading to potential data breaches, account takeover, and system compromise.
 
-**PROJECT OBJECTIVES**
+---
+
+# **PROJECT OBJECTIVES**
 
 - Assess password policies for compliance with best practices.
 - Verify MFA enforcement across critical accounts.
@@ -100,7 +113,7 @@ Observations from testing were documented as evidence, including accounts withou
 
 Identified gaps were assessed to determine their potential security impact, including risks such as unauthorized access, credential compromise, and weaknesses arising from misconfigured authentication controls.
 
-1.  **Least Privilege Access:** This is otherwise known as **The Principle of Least Privilege (PoLP).** It refers to an information security concept in which a user is given the minimum levels of access or permissions needed to perform his/her job functions. It is widely considered to be a cybersecurity best practice and is a fundamental step in protecting [privileged access](https://www.cyberark.com/products/privileged-access/) to high-value data and assets. Least privilege extends beyond human access. The model can be applied to applications, systems or connected devices that require privileges or permissions to perform a required task. Least privilege enforcement ensures the non-human tool has the requisite access needed and nothing more. Effective least privilege enforcement requires a way to [centrally manage](https://www.cyberark.com/products/privileged-access-manager/) and secure privileged credentials, along with flexible controls that can balance cybersecurity and compliance requirements with operational and end-user needs. is a foundational security concept that dictates that users, systems, and applications should only be granted the minimum level of access necessary to perform their tasks.
+1.  **Least Privilege Access:** This is otherwise known as **The Principle of Least Privilege (PoLP).** It refers to an information security concept in which a user is given the minimum levels of access or permissions needed to perform his/her job functions. It is widely considered to be a cybersecurity best practice and is a fundamental step in protecting privileged access to high-value data and assets. Least privilege extends beyond human access. The model can be applied to applications, systems or connected devices that require privileges or permissions to perform a required task. Least privilege enforcement ensures the non-human tool has the requisite access needed and nothing more. Effective least privilege enforcement requires a way to centrally manage and secure privileged credentials, along with flexible controls that can balance cybersecurity and compliance requirements with operational and end-user needs. is a foundational security concept that dictates that users, systems, and applications should only be granted the minimum level of access necessary to perform their tasks.
 
 This principle reduces the attack surface by limiting unnecessary access. If an attacker compromises a low-privileged account, the damage is minimized compared to compromising an administrative account. Implementation of PoLP involves:
 
@@ -194,7 +207,7 @@ The purpose is to ensure that only authorized identities can perform specific ac
 
 **Environment Setup**
 
-1.  Define systems and accounts in scope (e.g., Active Directory, cloud IAM, application accounts).
+1.  FreeIPA installed on Fedora VM was setup in Oracle VirtualBox.
 
 **Password Policy Review**
 
