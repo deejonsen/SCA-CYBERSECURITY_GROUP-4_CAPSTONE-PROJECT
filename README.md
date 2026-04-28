@@ -22,7 +22,6 @@
 - [Evidence Log](#-evidence-log)
 - [Risk Matrix](#-risk-matrix)
 - [Recommendations](#-recommendations)
-- [Evidence](#-evidence)
 - [Author](#-author)
 - [License](#-license)
 
@@ -46,47 +45,21 @@ Welcome to **SCA-CYBERSECURITY_GROUP-4_CAPSTONE-PROJECT**! This repository conta
 ```
 SCA-CYBERSECURITY_GROUP-4_CAPSTONE-PROJECT/
 |
-├── report/                # Final report (Word)
+├── report/                →  Final report (Word)
 |  └── Capstone Project Report.docx
-├── screenshots/           # Evidence screenshots (OTP setup, password policies, role assignments, login tests, OTP failures)
-| ├── IMG_1844.png               ← Team Cyber Shield logo
-│   ├── screenshot-intro.png       ← Intro / home screen
-│   ├── screenshot-level1.png      ← Phishing email level
-│   ├── screenshot-level2.png      ← WhatsApp scam level
-│   ├── screenshot-level3.png      ← Fake login page level
-│   ├── screenshot-level4.png      ← Vishing call level
-│   ├── screenshot-level5.png      ← Multi-step attack level
-│   ├── screenshot-feedback.png    ← Feedback screen
-│   └── screenshot-endscreen.png   ← End / results screen
-| ├──
-| ├──
-| ├──
-| ├──
-| ├──
-| ├──
-| ├──
+├── screenshots/ 
+| └── screenshots         →  Evidence screenshots (OTP setup, password policies, role assignments, login tests, OTP failures)
+├── scripts/              → Scripts and commands used in Fedora VM
+| ├── demo_flow.md        →  Step-by-step IAM audit commands (password policy, MFA, roles, accounts)
+| ├── setup.sh            →  Shell script to install and configure FreeIPA on Fedora
+| ├── audit_commands.txt  →  Quick checklist of commands for live demo
+| └── reset_env.sh        → Script to reset/reinstall Fedora VM environment for clean runs
+|
+├── docs/
+| └── Risk matrix
+├── presentation/          →  Slide deck for capstone presentation
 | └──
-
-
-├── scripts/              # Scripts and commands used in Fedora VM
-| ├── demo_flow.md        # Step-by-step IAM audit commands (password policy, MFA, roles, accounts)
-| ├── setup.sh            # Shell script to install and configure FreeIPA on Fedora
-| ├── audit_commands.txt  # Quick checklist of commands for live demo
-| └── reset_env.sh        # Script to reset/reinstall Fedora VM environment for clean runs
-|
-├── docs/                  # Risk matrix
-||          Finding         | Likelihood | Impact | Overall Risk |                   Mitigation Strategy                           |
-|--------------------------|------------|--------|--------------|-----------------------------------------------------------------|
-| Weak Password Policy     | High       | High   | Critical     | Enforce complexity rules (uppercase, digits, symbols, rotation) |
-| Missing MFA / OTP        | High       | High   | Critical     | Enable OTP subsystem, require MFA for all privileged accounts   |
-| Excessive Privileges     | Medium     | High   | High         | Apply least privilege principle, review roles quarterly         |
-| Improper Role Assignment | Medium     | High   | High         | Separate duties, remove overlapping admin rights                |
-| Inactive Accounts        | High       | Medium | High         | Disable or delete unused accounts immediately                   |
-| Unauthorized Privilege Elevation | Medium | Critical | Critical | Monitor role changes, enforce MFA, audit privileges regularly |
-|
-├── presentation/          # Slide deck for capstone presentation
-|
-└── README.md              # Project overview
+└── README.md              →  Project overview
 
 ```
 
@@ -145,22 +118,6 @@ SCA-CYBERSECURITY_GROUP-4_CAPSTONE-PROJECT/
 - Disable inactive accounts promptly.  
 - Audit roles quarterly to prevent privilege creep.  
 - Monitor privilege changes and enforce MFA for all privileged accounts.  
-
----
-
-## 📸 Evidence
-|                           Screenshots                   |                Description                      |
-|---------------------------------------------------------|-------------------------------------------------|
-| ![Password Policy Review](Images/screenshot-intro.png)  | Mission briefing + agent name entry             |
-| ![Level 1](Images/screenshot-level1.png)                | Phishing email simulation                       |
-| ![Level 2](Images/screenshot-level2.png)                | WhatsApp scam chat UI                           |
-| ![Level 3](Images/screenshot-level3.png)                | Fake bank login page                            |
-| ![Level 4](Images/screenshot-level4.png)                | Live vishing call simulation                    |
-| ![Level 5](Images/screenshot-level5.png)                | Multi-vector recruitment scam                   |
-| ![Feedback](Images/screenshot-feedback.png)             | AI analysis + security tip                      |
-| ![End](Images/screenshot-endscreen.png)                 | Final score, badges & ending                    |
-
-> 📸 *Add screenshots by saving images into the `/Images` folder and pushing to GitHub.*
 
 ---
 
