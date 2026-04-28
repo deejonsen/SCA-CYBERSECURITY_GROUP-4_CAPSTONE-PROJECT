@@ -156,8 +156,8 @@ Feel free to open issues, submit pull requests, and share your own experiences a
 ## 👩‍💻 Author
 
 Dorcas Johnson | Ruth Olatunji | Sarah Effiong | Rita Olisakwe | Iyewunmi Olanrewaju | Grace Ebimoh | Favour Marcus | Crown Godwin
-Group 4 
-She Code Africa Cybersecurity Capstone Project  
+
+She Code Africa Cybersecurity Group 4 Capstone Project  
 Location: Remote
 
 **Purpose:** Educational demonstration of auditing password security and identity/access management (IAM) configurations to identify weak authentication controls and misconfigured privileges.
