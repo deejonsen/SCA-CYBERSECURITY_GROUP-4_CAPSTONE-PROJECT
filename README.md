@@ -88,11 +88,11 @@ SCA-CYBERSECURITY_GROUP-4_CAPSTONE-PROJECT/
 ## 📋 Evidence Log
 |     Control Tested       |     Commands        |   Screenshot Reference   |       Result       |   Risk Level   | Recommendation |
 |--------------------------|---------------------|--------------------------|----------------------|--------------|----------------|
-| Password Policy Review   | `ipa pwpolicy-show` | screenshots/pwpolicy.png | Minimum length = 8, lockout enabled | Medium | Enforce complexity rules (uppercase, digits, symbols) |
-| MFA / OTP Enforcement    | `ipa otptoken-add`, `kinit admin` | screenshots/otp_fail.png | OTP token created, login failed initially due to config gap | High | Reconfigure FreeIPA with OTP enabled |
-| Least Privilege Access   | `ipa role-show Developer` | screenshots/role_developer.png | Developer role has limited rights | Low | Maintain least privilege principle, review quarterly |
-| Role Assignments         | `ipa role-show Admin` | screenshots/role_admin.png | Admin retains full privileges | Medium | Separate duties, avoid overlapping critical roles |
-| Account Audits           | `ipa user-find --inactive` | screenshots/account_audit.png | No inactive accounts identified | Low | review accounts quarterly |
+| Password Policy Review   | `ipa pwpolicy-show` | `screenshots/global policy cli.png`, `global policy 1.png`, `global policy 2.png` | Minimum length = 8, lockout enabled | Medium | Enforce complexity rules (uppercase, digits, symbols) |
+| MFA / OTP Enforcement    | `ipa otptoken-add`, `kinit admin` | `screenshots/ipa totpoken-show.png`, `ipa kinit admin.png` | OTP token created, login failed initially due to missing secret key | High | Reconfigure FreeIPA with OTP enabled |
+| Least Privilege Access   | `ipa role-show Developer` | `screenshots/ipa role-show 1.png`, `ipa role-show 2.png` | Developer role has limited rights | Low | Maintain least privilege principle, review quarterly |
+| Role Assignments         | `ipa role-show Admin` | `screenshots/ipa role-show 1.png`, `ipa role-show 2.png` | Admin retains full privileges | Medium | Separate duties, avoid overlapping critical roles |
+| Account Audits           | `ipa user-find --all` | `screenshots/ipa user-find-all.png` | No inactive accounts identified | Low | review accounts quarterly |
 
 ---
 
