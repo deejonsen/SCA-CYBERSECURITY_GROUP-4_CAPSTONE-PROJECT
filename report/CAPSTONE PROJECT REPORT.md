@@ -222,10 +222,39 @@ Account audit is the process of reviewing and analyzing user accounts in a syste
 ## **Findings:**
 
 - Password policy enforces minimum length and expiration, but history size = 0 allows reuse.
+
+<img width="775" height="436" alt="image" src="https://github.com/user-attachments/assets/8304bb49-a465-4404-8c24-bce4179897d6" />
+
+
 - Admins group correctly linked, but users group policy weaker (priority 3, shorter lifetime).
+
+<img width="775" height="436" alt="image" src="https://github.com/user-attachments/assets/55d0722a-41d9-4c4d-876a-d51ae583cad0" />
+
+<img width="775" height="436" alt="image" src="https://github.com/user-attachments/assets/a71b2d02-4c7f-4bca-9d8c-a58ac37befd3" />
+
+<img width="775" height="407" alt="image" src="https://github.com/user-attachments/assets/0d6c1d8b-b9e9-48cd-8f17-16dfb1764b04" />
+
+<img width="775" height="407" alt="image" src="https://github.com/user-attachments/assets/23072c28-9f6c-4696-b08a-e4e047080a00" />
+
+
 - Logs confirmed enforcement of password resets and ticket issuance.
+
+<img width="775" height="407" alt="image" src="https://github.com/user-attachments/assets/5e3f7cd4-739f-4e1a-abff-ee242fc6010b" />
+<img width="775" height="407" alt="image" src="https://github.com/user-attachments/assets/f4479e05-2109-4b17-9b65-26f758feb742" />
+
+
 - No accounts had MFA enabled.
+
+<img width="823" height="463" alt="image" src="https://github.com/user-attachments/assets/bff8de28-4c89-4061-84ee-99ec2d69dd12" />
+
+
 - No privilege escalation detected, but sudo rules need review.
+<img width="775" height="436" alt="image" src="https://github.com/user-attachments/assets/8b1e785d-0ff7-4a0c-acf1-7a3e7a0b535d" />
+<img width="775" height="436" alt="image" src="https://github.com/user-attachments/assets/9318b452-0a93-42fc-855f-8a3d55c31568" />
+<img width="722" height="406" alt="image" src="https://github.com/user-attachments/assets/8c241dbd-3aed-49ac-ae5d-1d8ac628c156" />
+<img width="775" height="436" alt="image" src="https://github.com/user-attachments/assets/33a0ca5a-c704-4027-95bd-5aa59972fa11" />
+<img width="775" height="316" alt="image" src="https://github.com/user-attachments/assets/3f4ceff6-2786-4b13-97c9-e4a2e6b072fa" />
+
 
 ## **Standards Comparison**
 
@@ -273,7 +302,7 @@ The policies partially comply with ISO 27001 requirements. While account lockout
   - Misconfigured IAM roles can let attackers climb from low level to admin access.
   - Testing escalation paths helps identify and patch these risks.
 6. **Identity Is the New Perimeter**
-  - Firewalls and antivirus aren’t enough — attackers target accounts first.
+  - Firewalls and antivirus aren’t enough as attackers now target accounts first.
   - Strong IAM practices are now the frontline of cybersecurity.
 
 ---
